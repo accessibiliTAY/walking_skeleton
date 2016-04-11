@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>MEAN STACK</title>
+    <script src="/vendor/angular/angular.min.js" type="text/javascript"></script>
+<script src="/assets/scripts/app.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div>
+      <h1>MEAN STACK APP</h1>
+    </div>
+    <div ng-controller="IndexController">
+     <p ng-show="cat.name">Your new dog's name is: {{catname}}</p>
+     <p ng-hide="cat.name">Enter your new dog's name!</p>
+
+     <form novalidate>
+         Name: <input type="text" ng-model="catname" /><br />
+         <input type="submit" ng-click="add(cat)" value="Save"/>
+     </form>
+
+     <h4>Dogs</h4>
+     <ul>
+         <li ng-repeat="cat in cats">{{catname}}</li>
+     </ul>
+ </div>
+ <p>
+   dogs rule, cats drool. 
+ </p>
+  </body>
+</html>
